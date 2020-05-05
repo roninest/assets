@@ -1,0 +1,101 @@
+vertex_program PBR_vs_glsl glsl
+{
+	source pbr.vert
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_UV
+}
+
+fragment_program 0/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_EMISSIVEMAP,HAS_NORMALMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,USE_IBL,MAX_LIGHTS=10
+}
+
+fragment_program A/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_EMISSIVEMAP,HAS_NORMALMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program B/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_EMISSIVEMAP,HAS_NORMALMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program C/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_EMISSIVEMAP,HAS_NORMALMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program D/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program E/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program F/PBR_fs_glsl glsl
+{
+	source pbr.frag
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,USE_TEX_LOD,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+vertex_program PBR_vs unified
+{
+	delegate PBR_vs_glsl
+	delegate PBR_vs_glsles
+}
+
+fragment_program PBR_fs unified
+{
+	delegate PBR_fs_glsl
+	delegate PBR_fs_glsles
+}
+
+fragment_program 0/PBR_fs unified
+{
+	delegate 0/PBR_fs_glsl
+	delegate 0/PBR_fs_glsles
+}
+
+fragment_program A/PBR_fs unified
+{
+	delegate A/PBR_fs_glsl
+	delegate A/PBR_fs_glsles
+}
+
+fragment_program B/PBR_fs unified
+{
+	delegate B/PBR_fs_glsl
+	delegate B/PBR_fs_glsles
+}
+
+fragment_program C/PBR_fs unified
+{
+	delegate C/PBR_fs_glsl
+	delegate C/PBR_fs_glsles
+}
+
+fragment_program D/PBR_fs unified
+{
+	delegate D/PBR_fs_glsl
+	delegate D/PBR_fs_glsles
+}
+
+fragment_program E/PBR_fs unified
+{
+	delegate E/PBR_fs_glsl
+	delegate E/PBR_fs_glsles
+}
+
+fragment_program F/PBR_fs unified
+{
+	delegate F/PBR_fs_glsl
+	delegate F/PBR_fs_glsles
+}

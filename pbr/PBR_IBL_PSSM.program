@@ -1,0 +1,149 @@
+vertex_program glTF2/IBL/PSSM/PBR_vs_glsl glsl
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_UV
+}
+
+fragment_program glTF2/IBL/PSSM/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/A/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/B/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/C/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/D/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/E/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/IBL/PSSM/F/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,USE_TEX_LOD,USE_IBL,DEPTH_SHADOWRECEIVER,MAX_LIGHTS=10
+}
+
+vertex_program glTF2/IBL/PSSM/PBR_vs_glsles glsles
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_UV
+}
+
+vertex_program glTF2/IBL/PSSM/PBRU_vs_glsles glsles
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER
+}
+
+fragment_program glTF2/IBL/PSSM/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/A/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/B/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/C/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/D/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,HAS_NORMALMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/E/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,HAS_BASECOLORMAP,USE_IBL
+}
+
+fragment_program glTF2/IBL/PSSM/F/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER,USE_IBL
+}
+
+vertex_program glTF2/IBL/PSSM/PBR_vs unified
+{
+	delegate glTF2/IBL/PSSM/PBR_vs_glsl
+	delegate glTF2/IBL/PSSM/PBR_vs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/A/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/A/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/A/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/B/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/B/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/B/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/C/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/C/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/C/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/D/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/D/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/D/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/E/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/E/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/E/PBR_fs_glsles
+}
+
+fragment_program glTF2/IBL/PSSM/F/PBR_fs unified
+{
+	delegate glTF2/IBL/PSSM/F/PBR_fs_glsl
+	delegate glTF2/IBL/PSSM/F/PBR_fs_glsles
+}

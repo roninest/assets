@@ -1,0 +1,81 @@
+material glTF2/Emissive/IBL/PBR
+{
+    technique
+    {
+      pass
+      {
+            texture_unit Albedo
+            {}
+            texture_unit Emissive
+            {}
+            texture_unit Normal
+            {}
+            texture_unit MetalRoughness
+            {}
+            texture_unit AmbientOcclusion
+            {}
+            texture_unit IBL_Diffuse
+            {}
+            texture_unit IBL_Specular
+            {}
+            texture_unit IBL_LUT
+            {}
+
+			vertex_program_ref glTF2/Emissive/IBL/PBR_vs
+			{
+                param_named_auto uMVPMatrix   worldviewproj_matrix
+                param_named_auto uModelMatrix world_matrix
+			}
+			fragment_program_ref glTF2/Emissive/IBL/PBR_fs
+			{
+                // standard parameters
+                param_named_auto uSurfaceAmbientColour surface_ambient_colour 0
+                param_named_auto uSurfaceDiffuseColour surface_diffuse_colour 0
+                param_named_auto uSurfaceSpecularColour surface_specular_colour 0
+                param_named_auto uSurfaceEmissiveColour surface_emissive_colour 0
+                param_named_auto uSurfaceShininessColour surface_shininess 0
+                param_named_auto uAlphaRejection surface_alpha_rejection_value 0
+                param_named_auto uAmbientLightColour ambient_light_colour 0
+				param_named_auto uLightCount light_count 0
+				param_named_auto uLightPositionArray light_position_array 10
+                param_named_auto uLightPositionObjectSpaceArray light_position_object_space_array 10
+                param_named_auto uLightPositionViewSpaceArray light_position_view_space_array 10
+				param_named_auto uLightDiffuseColourArray light_diffuse_colour_array 10
+				param_named_auto uLightSpecularColourArray light_specular_colour_array 10
+				param_named_auto uLightDiffuseScaledColourArray light_diffuse_colour_power_scaled_array 10
+				param_named_auto uLightSpecularScalesColourArray light_specular_colour_power_scaled_array 10
+				param_named_auto uLightDirectionArray light_direction_array 10
+				param_named_auto uLightAttenuationArray light_attenuation_array 10
+				param_named_auto uLightPowerArray light_power_array 10
+				param_named_auto uLightSpotParamsArray spotlight_params_array 10
+
+                param_named_auto uCamera         camera_position
+                param_named_auto uFogColour      fog_colour
+                param_named_auto uFogParams      fog_params
+
+                // PBR parameters
+                // param_named      uBaseColorFactor  float4 1 1 1 1
+                param_named      uNormalScale      float 1
+                // param_named      uEmissiveFactor   float3 1 1 1
+                param_named      uMetallicRoughnessValues float2 1 1
+                param_named      uOcclusionStrength float 1
+
+                // GL sampler settings
+                param_named      uBaseColorSampler   int 0
+                param_named      uEmissiveSampler      int 1
+                param_named      uNormalSampler    int 2
+                param_named      uMetallicRoughnessSampler int 3
+                param_named      uOcclusionSampler   int 4
+                param_named      uDiffuseEnvSampler  int 5
+                param_named      uSpecularEnvSampler int 6
+                param_named      ubrdfLUT            int 7
+
+                // This section is used to override final color for reference app visualization
+                // of various parameters in the lighting equation.
+                // param_named      uScaleFGDSpec       float4 0 0 0 0
+                // param_named      uScaleFGDSpec    float4 0 0 0 0
+                // param_named      uScaleIBLAmbient    float4 1 1 1 1
+			}
+        }
+    }
+}

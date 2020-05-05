@@ -1,0 +1,148 @@
+vertex_program glTF2/Emissive/PBR_vs_glsl glsl
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,HAS_UV
+}
+
+fragment_program glTF2/Emissive/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/A/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/B/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/C/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/D/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/E/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+fragment_program glTF2/Emissive/F/PBR_fs_glsl glsl
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,USE_TEX_LOD,MAX_LIGHTS=10
+}
+
+vertex_program glTF2/Emissive/PBR_vs_glsles glsles
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,HAS_UV
+}
+
+vertex_program glTF2/Emissive/PBRU_vs_glsles glsles
+{
+	source pbr-vert.glsl
+    preprocessor_defines HAS_NORMALS,HAS_TANGENTS,DEPTH_SHADOWRECEIVER
+}
+
+fragment_program glTF2/Emissive/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP
+}
+
+fragment_program glTF2/Emissive/A/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP,HAS_OCCLUSIONMAP
+}
+
+fragment_program glTF2/Emissive/B/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP,HAS_METALROUGHNESSMAP,HAS_SEPARATE_ROUGHNESSMAP
+}
+
+fragment_program glTF2/Emissive/C/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP,HAS_EMISSIVEMAP
+}
+
+fragment_program glTF2/Emissive/D/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP,HAS_NORMALMAP
+}
+
+fragment_program glTF2/Emissive/E/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS,HAS_BASECOLORMAP
+}
+
+fragment_program glTF2/Emissive/F/PBR_fs_glsles glsles
+{
+	source pbr-frag.glsl
+    preprocessor_defines MANUAL_SRGB,SRGB_FAST_APPROXIMATION,HAS_NORMALS,HAS_TANGENTS
+}
+
+vertex_program glTF2/Emissive/PBR_vs unified
+{
+	delegate glTF2/Emissive/PBR_vs_glsl
+	delegate glTF2/Emissive/PBR_vs_glsles
+}
+
+fragment_program glTF2/Emissive/PBR_fs unified
+{
+	delegate glTF2/Emissive/PBR_fs_glsl
+	delegate glTF2/Emissive/PBR_fs_glsles
+}
+
+fragment_program glTF2/Emissive/A/PBR_fs unified
+{
+	delegate glTF2/Emissive/A/PBR_fs_glsl
+	delegate glTF2/Emissive/A/PBR_fs_glsles
+}
+fragment_program glTF2/Emissive/B/PBR_fs unified
+{
+	delegate glTF2/Emissive/B/PBR_fs_glsl
+	delegate glTF2/Emissive/B/PBR_fs_glsles
+}
+
+fragment_program glTF2/Emissive/C/PBR_fs unified
+{
+	delegate glTF2/Emissive/C/PBR_fs_glsl
+	delegate glTF2/Emissive/C/PBR_fs_glsles
+}
+
+fragment_program glTF2/Emissive/D/PBR_fs unified
+{
+	delegate glTF2/Emissive/D/PBR_fs_glsl
+	delegate glTF2/Emissive/D/PBR_fs_glsles
+}
+
+fragment_program glTF2/Emissive/E/PBR_fs unified
+{
+	delegate glTF2/Emissive/E/PBR_fs_glsl
+	delegate glTF2/Emissive/E/PBR_fs_glsles
+}
+
+fragment_program glTF2/Emissive/F/PBR_fs unified
+{
+	delegate glTF2/Emissive/F/PBR_fs_glsl
+	delegate glTF2/Emissive/F/PBR_fs_glsles
+}

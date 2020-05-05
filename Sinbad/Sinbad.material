@@ -1,0 +1,245 @@
+material Sinbad/Body
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_body.dds
+			}
+
+             rtshader_system
+             {
+                 lighting_stage per_pixel
+             }
+		}
+	}
+}
+
+material Sinbad/Gold
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_clothes.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Sheaths
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_sword.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Clothes
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_clothes.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Teeth
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_body.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Eyes
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_body.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Spikes
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_clothes.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Blade
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_sword.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Ruby
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_sword.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Hilt
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_sword.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Sinbad/Handle
+{
+	receive_shadows on
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture sinbad_sword.dds
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
+
+material Examples/LightRibbonTrail
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			scene_blend add
+			depth_write off
+			diffuse vertexcolour
+
+			texture_unit
+			{
+				texture ribbonband.dds 1d
+				tex_address_mode clamp
+				filtering none
+			}
+
+            rtshader_system
+            {
+                lighting_stage per_pixel
+            }
+		}
+	}
+}
